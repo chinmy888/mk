@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+*,*:before,*:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body{ margin:0px; padding:0px; font-size:12px;font-family:'微软雅黑',arial,"黑体";color:#333;line-height:1; background:url(../images/bg.svg) center top repeat-y;background-size: 100% auto;/* background-attachment: fixed; */}
+ul,li,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,ol,form,input{ margin:0px; padding:0px;}
+input,textarea { font-family: "微软雅黑"; border: none; outline: none; background: none; }
+ul,li{ list-style:none}
+img{border:0px; padding:0px; display: block;}
+a{ color:#5c5c5c; text-decoration:none}
+
+h2,h3,h4,b,strong { font-weight: normal; }
+em,i { font-style: normal; }
+@font-face {
+	font-family:font1;
+	src: url(../font/font1.ttf);
+}
+@font-face {
+	font-family:GDP;
+	src: url(../font/GDP.ttf);
+}
+.clear{ zoom: 1; }
+.clear:after { content: ''; display: block; clear: both; }
+.fl { float:left}
+.fr { float:right}
+.hidden{display:none; background: url() no-repeat center;}
+
+.backTop{ opacity: 0; bottom: 80%; cursor: pointer; width: 40px; height: 40px; right: 15px;  position: fixed; z-index: 20; transition: 0.5s; border-radius:50%;}
+.backTop:after{  border-radius:50% ; width: 100%; height: 100%; content: ''; background: #003b71; opacity: 0.5; position: absolute; left: 0; top: 0; z-index: 1;}
+.backTop img{ width: 100%; height: 100%; border-radius:50%; position: relative; z-index: 2;}
+.backTop:hover:after{ transition: 1s;transform: scale(1.5); opacity: 0;}
+.backTop.on{bottom: 120px; opacity: 1;}
+.backTop p{ text-align: center; padding: 15px 0 0 0; font-size: 16px; color: #024f9f;}
+.top{ transition: 0.5s; width: 100%; height: 100px; position: fixed; top: 0; z-index: 99;}
+.top .topBox .nav ul li dl{ border-top:3px solid #01509f; display: none;  background: #fff; width: 180px; position: absolute; top: 100px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 10px rgba(0,0,0,0.1); padding: 0 15px; box-sizing: border-box;}
+
+
+
+.top .topBox .nav ul li dl dd{ height: 48px; line-height: 48px; text-align: center; border-bottom: 1px solid #ddd;}
+.top .topBox .nav ul li dl dd a{ font-size: 15px; color: #333;}
+.top .topBox .nav ul li dl dd a:hover{color: #024f9f;}
+
+.w1510{ width: 1510px; margin: 0 auto;}
+.topBox .yuyuan{ position: relative; font-size: 16px; color: #fff; float: right; padding-right: 37px; background: url(../images/yuyan2.png) right center no-repeat; float: right; line-height: 100px; background-size:24px auto; cursor: pointer; transition: 0.5s; position: relative;}
+.topBox .yuyuan:hover dl{ position: absolute;}
+
+
+.topBox .nav{ float: right;}
+.topBox .nav ul li{ position: relative; float: left; margin-right: 40px; line-height: 100px; transition: 0.5s;}
+.topBox .nav ul li:after{ position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;transition: 0.5s; width: 0; height: 4px; background: #024f9f; content: '';}
+
+
+.topBox .nav ul li a{ transition: 0.5s; font-size: 17px; color: #fff;}
+.topBox .logo{ float: left; line-height: 100px; transition: 0.5s; position: relative; height: 100px;}
+.topBox .logo a{ display: block; height: 100%; transition: 0.5s; color: #fff; font-size: 34px; font-weight: bold; font-style: italic;}
+.topBox .logo img{ display: inline-block; vertical-align: middle; height: 60%; width: auto; margin-right: 15px;}
+.topBox .logo img.on{ opacity: 0;}
+.top.on{ background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); height: 80px;}
+.top.on .logo{ height: 80px; line-height: 80px;}
+.top.on .logo a{ color: #333; font-size: 24px;}
+.top.on .topBox .logo img{height: 40px;}
+.top.on .topBox .nav ul li{ line-height: 80px; position: relative;}
+.top.on .topBox .nav ul li dl{top: 80px; }
+
+.top.on .topBox .nav ul li a{ color: #222;}
+.top.on .topBox .yuyuan{ line-height: 80px; background: url(../images/yuyan1.png) right center no-repeat; color: #222;}
+
+
+.sec .top{ background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+.sec .top .topBox .nav ul li a{ color: #222;}
+.sec .top .topBox .yuyuan{  background: url(../images/yuyan1.png) right center no-repeat; color: #222;}
+.sec .top .topBox .logo img{opacity: 0;}
+.sec .top .topBox .logo img.on{ opacity: 1;}
+
+.top:hover{ background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+.top:hover .logo a{ color: #333;}
+.top:hover .topBox .nav ul li a{ color: #222;}
+.top:hover .topBox .yuyuan{ background: url(../images/yuyan1.png) right center no-repeat; color: #222;}
+.top:hover .topBox .yuyuan:hover{background-image: url(../images/yuyan3.png);}
+
+.top .topBox .nav ul li:hover>a{ color: #01509f;}
+.top.on .topBox .nav ul li:hover>a{color: #01509f;}
+
+
+
+
+.banner{ display: block; width: 100%; height: 100vh; position: relative; overflow: hidden; position: fixed; top: 0; left: 0;}
+.banner { width: 100%; height: 80vh;}
+.banner img{ display: block; width: 100%; height: 100%; object-fit: cover;}
+.banner:after{ content: ''; z-index: 1; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+  backdrop-filter: blur(15px); /* 添加模糊效果 */
+  opacity: 1; /* 整体透明度 */
+  padding: 20px; /* 内边距 */
+  border-radius: 10px; /* 圆角 */}
+.bannerBox{ z-index: 2; width: 1200px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;}
+.bannerBox .icon{ width: 550px; float: right;}
+.bannerBox .text{ width: 600px; float: left;}
+.bannerBox .text .bt{ text-align: center; font-size: 26px; line-height: 38px; color: #fff; font-weight: bold;}
+.bannerBox .text ul{ width: 100%; text-align: center; padding-top: 100px;}
+.bannerBox .text ul li{ border-radius:8px; transition: 0.5s; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 10px 10px 0 10px; display: inline-block; margin: 0 10px; background: #fff; width: 170px;}
+.bannerBox .text ul li img{ display: block; width: 100%; height: auto;}
+.bannerBox .text ul li p{ transition: 0.5s; text-align: center; height: 40px; line-height: 35px; font-size: 16px; color: #333;}
+.bannerBox .text ul li:hover{ background:#fe5900 ;}
+.bannerBox .text ul li:hover p{ color: #fff;}
+.bannerBox .icon img{ border-radius:15px 15px 0 0 ; width: 100%; height: auto;}
+.footer.mg{ margin-top: 125px;}
+.footer{ margin-top: 80vh; box-shadow: 0 0 10px rgba(0,0,0,0.1); background: url(../images/bg4.png) #fff; height: 400px; background-size:100% 100%; position: relative; z-index: 1;}
+.footerBox{ padding-top: 110px; overflow: hidden;}
+.footerBox .footerLeft{ float: left; width: 290px;}
+.footerBox .footerLeft .logo{ width: 100%;}
+.footerBox .footerLeft .logo img{ display: block; width: 40%; margin: 0 auto; height: auto;}
+.footerBox .footerLeft .logo p{ text-align: center; font-size: 20px; color: #333; padding-top: 20px; letter-spacing: 11px; font-weight: bold;}
+.footerBox .footerLeft .logo p span{ color: #fe5900;}
+.footerBox .footerLeft:nth-child(2){ float: right; margin-left: 100px;}
+.footerBox .footerLeft .phone p{ font-size: 20px; color: #024E9F;}
+.footerBox .footerLeft .phone ul{ padding-top: 25px;}
+.footerBox .footerLeft .phone ul li{ height: 30px; margin-bottom: 10px; padding-left: 40px; position: relative; line-height: 30px; font-size: 16px;}
+.footerBox .footerLeft .phone ul li img{ display: block; height: 100%; width: auto; position: absolute; left: 0; top: 0; line-height: 30px; color: #000;}
+.footerBox .footerLeft dl{ overflow: hidden; padding-top: 10px;}
+.footerBox .footerLeft dl dd{ float: left; width: 30px; height: 30px; position: relative; margin-right: 10px; overflow: hidden;}
+.footerBox .footerLeft dl dd span{ position: absolute; top: 0; left: 0; transition: 0.5s; width: 30px; height: 60px;}
+.footerBox .footerLeft dl dd span img{ display: block; width: 30px; height: 30px;}
+.footerBox .footerLeft dl dd:hover span{ top: -30px;}
+.footerBox .footerRight{ float: right;}
+.footerBox .footerRight ul{ float: left;padding-left: 90px;}
+.footerBox .footerRight ul h2{ font-size: 20px; color: #024E9F; font-weight: bold; margin-bottom: 35px; }
+.footerBox .footerRight ul li{ margin-bottom: 25px; position: relative; transition: 0.5s;}
+.footerBox .footerRight ul li:after{ content: ''; position: absolute; left: 0; width: 0; height: 3px; border-radius:2px ; top: 50%; transform: translateY(-50%); transition: 0.5s; background: #024f9f;}
+.footerBox .footerRight ul li a{ transition: 0.5s; display: block;}
+.footerBox .footerRight ul li a{ color: #000; font-size: 16px;}
+.footerBox .footerRight ul li:hover a{transform: translateX(20px);}
+.footerBox .footerRight ul li:hover:after{ width: 15px;}
+.footerBox .footerRight ul li:hover a{ color: #024E9F;}
+.copyRight{ width: 100%; height: 130px; background: #024f9f; position: relative; z-index: 2;}
+.copyRightBox{ line-height: 130px; font-size: 16px; color: #fff;}
+.copyRightBox span{ display: inline-block; float: right;}
+.copyRightBox span a{ color: #fff; font-size: 16px;}
+
+.AppTop{ display: none;}
+ 	
+@media(max-width:1000px) {
+	.w1510{ width: 100%;}
+	body{ padding-top: 60px;}
+	.top{ display: none;}
+	.AppTop{ display: block; z-index: 99; width: 100%; height: 80px; position: fixed; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); top: 0;}
+	.slideClick{ width: 28px; height: 22px; position: absolute; right:15px; top: 50%; transform: translateY(-50%);transition: 0.5s;}
+	.slideClick  span{ width: 100%; height: 3px; background: #000; display: block; position: absolute; transition: 0.5s;}
+	.slideClick span:nth-child(1){ left: 0; top: 0;}
+	.slideClick span:nth-child(2){ left: 0; top: 50%; transform: translateY(-50%);}
+	.slideClick span:nth-child(3){ left: 0; bottom: 0;}
+	.logo{ height: 80px; line-height: 80px; float: left; padding-left: 25px;}
+	.logo img{ display: inline-block; vertical-align: middle; height: 40%; width: auto;}
+	.banner{ position: relative;}
+	.indexContainer{ margin-top: 0;}
+	.indexContainer.index{ margin-top: 0;}
+	.bannerPage{ width: 100%;}
+	.bannerPage img{ display: block; width: 100%; height: auto;}
+	.slideClick.on{ transform: translateY(-50%) rotate(180deg);}
+	.slideClick.on span:nth-child(1){ top: 50%; transform: translateY(-50%) rotate(-45deg);}
+	.slideClick.on span:nth-child(2){ width: 0;}
+	.slideClick.on span:nth-child(3){ top: 50%; transform: translateY(-50%) rotate(45deg);}
+	.SideNav{ position: absolute; top: 80px; left: 0; width: 100%; background: #fff; padding:0 25px 30px 25px; display: none; box-sizing: border-box; box-shadow: 0 10px 10px rgba(0,0,0,0.1);}
+	.SideNav ul{ width: 100%;}
+	.SideNav ul li{ height: 48px; border-bottom: 1px solid #eee; line-height: 48px;}
+	.SideNav ul li a{ font-size: 16px; color: #333;}
+	.navGation{ height: auto;}
+	.navGation ul{ overflow: hidden;}
+	.navGation ul li{ width: 25%; float: left;}
+	.navGation ul li a{ padding: 0 ; zoom: 0.8; line-height: 40px; font-size: 12px; text-align: center;}
+	
+	.indexContainer .layer1{ padding: 30px 15px; box-sizing: border-box;}
+	.indexContainer .layer1 .text{ width: 100%;}
+	.indexContainer .layer1 .text h2{ font-size: 24px; height: auto; line-height: 24px;}
+	.indexContainer .layer1 .text p{ font-size: 16px; line-height: 16px; margin-top: 25px; height: auto;}
+	.indexContainer .layer1 .text ul li{ font-size: 14px; line-height: 26px;}
+	.indexContainer .layer1 .text a.enter{ margin-top: 30px;}
+	.indexContainer .layer1 dl{ padding-top: 30px;}
+	.indexContainer .layer1 dd h2{ font-size: 18px;}
+	.indexContainer .title{ padding: 45px 15px;}
+	.indexContainer .title h2{ font-size: 24px;}
+	.indexContainer .title p{ font-size: 16px; padding-top: 30px;}
+	.indexContainer .layer2{ height: auto;}
+	.indexContainer .layer2 .title .btn .swiper-button-prev{ width: 30px; height: 30px; background-size:100% 100% ;}
+	.indexContainer .layer2 .title .btn .swiper-button-next{ width: 30px; height: 30px; background-size:100% 100% ;}
+	.indexContainer .layer2 .title .btn{ width: 100px; height: 30px; right: 15px;}
+	.indexContainer .layer2 .swiper-container{ height: auto; padding-bottom: 120px;}
+	.indexContainer .layer3 .hd ul{ width: 95%; margin: 0 auto; float: inherit;}
+	.indexContainer .layer3 .hd ul li{ width: 25%; font-size: 14px;}
+	.indexContainer .layer3 .hd a.more{ display: none;}
+	.indexContainer .layer3 .swiper-container{ height: auto;}
+	.indexContainer .layer3 .bd{ height: auto; padding-bottom: 400px;}
+	.indexContainer .layer3 .controlBottom .swiper-scrollbar{ display: none;}
+	.indexContainer .layer3 .controlBottom{ width: 90%;}
+	.indexContainer .layer3 .hd ul li span{ display: none;}
+	.indexContainer .layer3 .controlBottom .swiper-button-prev{ left: 30%;}
+	.indexContainer .layer3 .controlBottom .swiper-button-next{ right: 30%;}
+	.indexContainer .layer3{ padding-bottom: 55px;}
+	.indexContainer .layer1 .icon:nth-child(2){ width: 100%; height: auto; margin-top: 30px;}
+	.indexContainer .layer1 dd .icon{ height: 70px;}
+	.indexContainer .layer1 dd .icon img{ width: 60%; height: auto;}
+	
+ 	.footer{ margin: 0; height: auto;}
+ 	.bannerBox{ width: 100%; height: auto; top: 50%; left: 0%; transform: translateY(-50%);}
+ 	.bannerBox .text ul li{ width: 28%; margin: 0 5px; padding: 5px;}
+ 	.bannerBox .text{ width: 100%;}
+ 	.bannerBox .icon{ width: 100%; display: none;}
+ 	.bannerBox .text ul li p{ font-size: 12px; height: 30px; line-height: 30px;}
+ 	.footerBox{ padding: 15px; box-sizing: border-box;}
+ 	.footerBox .footerLeft{ width: 100%;}
+ 	.footerBox .footerLeft .logo{ height: auto;}
+ 	.footerBox .footerRight{ display: none;}
+ 	.copyRight{ height: auto; padding:30px 15px; box-sizing: border-box;}
+ 	.copyRightBox{ height: auto; width: 100%; line-height: 24px; text-align: center; overflow: hidden; font-size: 14px;}
+ 	.copyRightBox span{ display: block; width: 100%; font-size: 14px;}
+ 	.copyRightBox span a{ font-size: 14px;}
+ 	
+ 	.footerBox .footerLeft .phone p{ text-align: center;}
+	.footerBox .footerLeft .phone ul li{ padding: 0; text-align: center;}
+	.footerBox .footerLeft dl{ text-align: center;}
+	.footerBox .footerLeft dl dd{ float: inherit; display: inline-block; margin: 0 8px;}
+	.footerBox .footerLeft .phone ul li img{ left: 20%;}
+	
+}
+@media(max-width:1600px) and (min-width:1001px){
+	.indexContainer .layer3.pos .layer3Box .bd{ padding-bottom: 50px; height: auto;}
+	
+	.banner .bannerBox h2{ font-size: 44px;}
+	.indexContainer .layer2 .icon:after{ display: none}
+	.indexContainer .title h2{ font-size: 48px;}
+	.indexContainer .title p{ font-size: 24px; padding-top: 30px;}
+	
+	.indexContainer .layer2{ height: 868px;}
+	.indexContainer .layer3 .controlBottom .swiper-scrollbar{ width: 900px;}
+	.indexContainer .layer3 .hd{ position: relative; overflow: visible;}
+	.indexContainer .layer3 .hd ul{ width: 100%;float: inherit;}
+	.indexContainer .layer3 .hd a.more{ position: absolute; right: 0; top: -80px;}
+	.footerBox .footerLeft{ width: 240px;}
+	.footerBox .footerLeft .logo p{ font-size: 15px;}
+	.footerBox .footerRight ul h2{ font-size: 18px;}
+	.footerBox .footerRight ul li a{ font-size: 14px;}
+	
+	.banner .bannerBox{ top: 30%;}
+	.indexContainer .layer3 .swiper-container{ height: auto;}
+	.indexContainer .layer3 .bd{ height: 500px;}
+	.footerBox .footerLeft .logo p{ font-weight: bold; text-indent: 2px; white-space: nowrap;}
+	
+	.footerBox .footerRight ul{ padding-left: 50px;}
+	
+}
